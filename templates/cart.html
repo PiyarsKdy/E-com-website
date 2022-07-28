@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% block title %}
+    ASIM|cart
+{% endblock title %}
+{% block body %}
+    
+
+    <div class="container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="{{ url_for('static',filename='images/iphone_13.png')}}" width="100px" height="100px">
+                        <div>
+                            <p>Iphone 13 purple</p>
+                            <small>price: ₹68000</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>₹68000</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="{{ url_for('static',filename='images/lenovo-laptop.png')}}" width="100px" height="100px">
+                        <div>
+                            <p>Lenovo laptop i5 10th gen</p>
+                            <small>price: ₹50000</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>₹50000</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="{{ url_for('static',filename='images/samsung-tv.png')}}" width="100px" height="100px">
+                        <div>
+                            <p>Samsung LED tv</p>
+                            <small>price: ₹53000</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>₹53000</td>
+
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>₹120000</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>₹10000</td>
+                </tr>
+                <tr>
+                    <td>discount</td>
+                    <td>₹5000</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>₹125000</td>
+                </tr>
+            </table>
+            <a href="/checkout"><button class="butn">Place Order</button></a> 
+        </div>
+    </div>
+
+{% endblock body %}

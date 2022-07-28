@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% block title %}
+    ASIM|checkout
+{% endblock title %}
+{% block body %}
+    <div class="account-page">
+        <div class="container d-flex align-items-center">
+            <div class="form-container container">
+                <h2 class="mb-4">checkout</h2>
+                <div class="black container tx-left">
+                    <h3 class="mb-2">billing address</h3>
+                    <form action="/checkout" method="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <label for="firstName" class="form-label">First name: </label>
+                            <input id="firstName" type="text" name="fname" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Give valid first name.
+                            </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name: </label>
+                                <input id="lastName" type="text" name="lname" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Give valid last name.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="userName" class="form-label">Username: </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">@</span>
+                                    <input id="userName" type="text" name="username" class="form-control" required>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Give valid username.
+                                </div>
+                            </div>
+                            <div class="col-md-5 my-2">
+                                <label for="country" class="form-label">Country: </label>
+                                <select id="country" type="text" name="country" class="form-control" required>
+                                    <option value="">Choose</option>
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 my-2">
+                                <label for="state" class="form-label">State: </label>
+                                <select id="state" type="text" name="state" class="form-control" required>
+                                    <option value="">Choose</option>
+                                    <option value="gj">Gujrat</option>
+                                    <option value="mh">Maharashtra</option>
+                                    <option value="dl">Delhi</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 my-2">
+                                <label for="Postcode" class="form-label">Postcode: </label>
+                                <input id="Postcode" type="number" name="postcode" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Give valid postcode.
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <label for="Address" class="form-label">Address: </label>
+                                <input id="Address" type="text" name="address" class="form-control" required>
+                            </div>
+                            <hr class="my-4">
+                            <div class="col-12">
+                                <input id="sameaddress" type="checkbox" style="width: 15px; height: 15px; margin:0">
+                                <label for="sameaddress">shipping adress is the same as billing</label>
+                            </div>
+                            <hr class="my-4">
+                            <h3 class="mb-3">Payments</h3>
+                            <div class="col-12">
+                                <div>
+                                    <input id="creditcard" type="radio" class="form-check-input" name="paymentMethod" checked required>
+                                    <label for="creditcard">Creditcard / Debitcard</label>
+                                </div>
+                                <div>
+                                    <input id="NetBanking" type="radio" class="form-check-input" name="paymentMethod" required>
+                                    <label for="NetBanking">Net Banking</label>
+                                </div>
+                                <div>
+                                    <input id="UPI" type="radio" class="form-check-input" name="paymentMethod" required>
+                                    <label for="UPI">UPI</label>
+                                </div>
+                                <div>
+                                    <input id="COD" type="radio" class="form-check-input" name="paymentMethod" required>
+                                    <label for="COD">Cash On Delivery</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="butn">proceed</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

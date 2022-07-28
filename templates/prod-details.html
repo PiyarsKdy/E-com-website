@@ -1,0 +1,213 @@
+{% extends 'layout.html' %}
+{% block title %}
+    ASIM|product-details
+{% endblock title %}
+{% block body %}ASIM|product-details
+    
+
+
+    <!-- single product details  -->
+    <div class="fluid-container spd mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 p-2">
+                <div class="row">
+                    <img src="{{ url_for('static',filename='images/iphone_13.png')}}" width="80%" height="80%" id="ProductImg">
+                </div>
+                <div class="row sm-row d-flex">
+                    <div class="col sm-col">
+                        <img src="{{ url_for('static',filename='images/iphone-13-1.png')}}" class="SmImg" >
+                    </div>
+                    <div class="col sm-col">
+                        <img src="{{ url_for('static',filename='images/iphone-13-2.png')}}" class="SmImg">
+                    </div>
+                    <div class="col sm-col">
+                        <img src="{{ url_for('static',filename='images/iphone-13-3.png')}}" class="SmImg">
+                    </div>
+                    <div class="col sm-col">
+                        <img src="{{ url_for('static',filename='images/iphone-13-4.png')}}" class="SmImg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="mt-3">{{prod.cat_pro}}</p>
+                <h3><span>Brand:</span> {{prod.brand}}</h3>
+                <h2>{{prod.title}}</h2>
+                <strong>MRP: </strong><div class="product-mrp my-2"><strong>₹{{prod.mrp}}</strong></div>
+                <h3 class="mt-2" style="color: black;">price: ₹{{prod.price}}</h3>
+                <select class="my-4">
+                    <option>{{prod.ram}} | {{prod.rom}}</option>
+                    
+                    <input type="number" value="1">
+                    <a href="/cart"><button type="button" class="butn"><i class="fa-solid fa-cart-plus fi"></i> Add to cart</button></a>
+                    <h3 class="mt-5">Product details &nbsp;<i class="fa fa-indent"></i></h3><br>
+                    <p>{{prod.details}}</p>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="trending mt-5">
+        <h2 class="tx-center">Related Products</h2>
+        <div class="row">
+            <div class="col products">
+                <div class="container-fluid">
+                        
+                    <div class="row product-items d-flex justify-content-center">
+                        <!-- single product -->
+                        <div class="col col-lg-3 product">
+                            <div class="product-content">
+                                <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/iphone_13.png')}}" alt="iphone13">
+                                </div>
+                                <div class="product-btns">
+                                    <button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button>
+                                    <button type="button" class="butn">Buy now 
+                                    </button>
+                                    <button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-lg-3 product">
+                            <div class="product-content">
+                                <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/lenovo-laptop.png')}}" alt="iphone13">
+                                </div>
+                                <div class="product-btns">
+                                    <button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button>
+                                    <button type="button" class="butn">Buy now 
+                                    </button>
+                                    <button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-lg-3 product">
+                            <div class="product-content">
+                                <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/headphone.png')}}" alt="iphone13">
+                                </div>
+                                <div class="product-btns">
+                                    <button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button>
+                                    <button type="button" class="butn">Buy now 
+                                    </button>
+                                    <button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- js  -->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmImg = document.getElementsByClassName("SmImg")
+        SmImg[0].onclick = function(){
+            ProductImg.src = SmImg[0].src
+        }
+        SmImg[1].onclick = function(){
+            ProductImg.src = SmImg[1].src
+        }
+        SmImg[2].onclick = function(){
+            ProductImg.src = SmImg[2].src
+        }
+        SmImg[3].onclick = function(){
+            ProductImg.src = SmImg[3].src
+        }
+        
+    </script>
+
+{% endblock body %}

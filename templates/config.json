@@ -1,0 +1,8 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri":  "postgresql://postgres:admin@localhost/ecom",
+        "prod_uri": "postgresql://postgres:admin@localhost/ecom"
+    }
+}

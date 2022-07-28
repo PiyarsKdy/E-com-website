@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block title %}
+    ASIM|shop
+{% endblock title %}
+{% block body %}
+    
+
+    <section class="trending">
+        <div class="row trend">
+            <hr>
+            <h1 class="trend-title">Products</h1>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <h2 class="tx-center mb-1">Brands</h2>
+                <select class="al-center">
+                    <option>Apple</option>
+                    <option>Samsung</option>
+                    <option>Xiomi</option>
+                    <option>Realme</option>
+                    <option>Panasonic</option>
+                    <option>Boat</option>
+                    <option>Sony</option>
+                    <option>Vivo</option>
+                    <option>LG</option>
+                </select>
+            </div>
+            <div class="col">
+                <h2 class="tx-center mb-1">Sort by</h2>
+                <select class="al-center">
+                    <option>Price: low to high</option>
+                    <option>Price: high to low</option>
+                    <option>Items: new to old</option>
+                    <option>Items: old to new</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col products">
+                <div class="container-fluid">
+                    <div class="row product-items d-flex justify-content-center">
+                        <!-- single product -->
+                        {% for prod in prods %}
+                            <div class="col col-lg-3 product">
+                                <div class="product-content">
+                                    <a href="/prod-details"><div class="product-img">
+                                        <img src="{{ url_for('static',filename='images/iphone_13.png')}}" alt="iphone13">
+                                    </div></a>
+                                    <div class="product-btns">
+                                        <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                        </button></a>
+                                        <a href="/checkout"><button type="button" class="butn">Buy now 
+                                        </button></a>
+                                        <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                        </button></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <div class="product-info-top">
+                                        <h2>{{prod.brands}}</h2>
+                                        <div class="rating">
+                                            <span><i class="fas fa-star"></i>
+                                            </span>
+                                            <span><i class="fas fa-star"></i>
+                                            </span>
+                                            <span><i class="fas fa-star"></i>
+                                            </span>
+                                            <span><i class="fa-solid fa-star-half-stroke"></i>
+                                            </span>
+                                            <span><i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="/prod-details/{{prod.slug}}" class="product-name"> {{prod.title}}</a>
+                                    <p class="product-mrp">₹{{prod.mrp}}</p>
+                                    <p class="product-price">₹{{prod.price}}</p>
+                                </div>
+
+                                <div class="offer-info">
+                                    <h2>{{prod.offer}}% off</h2>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        <!-- /single-product -->
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-btn tx-center">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594</span>
+        </div>
+    </section>
+
+{% endblock body %}
+    

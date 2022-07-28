@@ -1,0 +1,384 @@
+{% extends 'layout.html' %}
+{% block title %}
+    ASIM|Home
+{% endblock title %}
+{% block body %}
+    <section class="offer">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6 select-big d-flex justify-content-center align-items-center">
+                            <div class="big-text">
+                                <h2>Hurry up, The sale is on.</h2>
+                                <h1>Iphone13 is 15% OFF</h1>
+                                <a href="/prod-details"><button type="button" class="butn">Shop now</button></a>
+                            </div>
+
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-bottom">
+                            <div class="iphone-13">
+                                <img src="{{ url_for('static',filename='images/iphone_13.png')}} " alt="Iphone-13">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 select-big d-flex justify-content-center align-items-center">
+                            <div class="big-text">
+                                <h2>Hurry up, The sale is on.</h2>
+                                <h1>Boat headphones is 20% OFF</h1>
+                                <a href="/prod-details"><button type="button" class="butn">Shop now</button></a>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-bottom">
+                            <div class="iphone-13">
+                                <img src="{{ url_for('static',filename='images/headphone.png')}} " alt="Iphone-13">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 select-big d-flex justify-content-center align-items-center">
+                            <div class="big-text">
+                                <h2>Hurry up, The sale is on.</h2>
+                                <h1>Iphone13 is 15% OFF</h1>
+                                <a href="/prod-details"><button type="button" class="butn">Shop now</button></a>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-bottom">
+                            <div class="iphone-13">
+                                <img src="{{ url_for('static',filename='images/lenovo-laptop.png')}} " alt="Iphone-13">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+    <section class="trending">
+        <div class="row trend">
+            <hr>
+            <h1 class="trend-title">Trending</h1>
+        </div>
+        <div class="row">
+            <div class="col products">
+                <div class="container-fluid">
+                    <div class="row product-items d-flex justify-content-center">
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/iphone_13.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/lenovo-laptop.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/headphone.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/samsung-tv.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/iphone_13.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                        <!-- single product -->
+                        <div class="col col-xl-3 col-lg-4 col-md-6 product">
+                            <div class="product-content">
+                                <a href="/prod-details"> <div class="product-img">
+                                    <img src="{{ url_for('static',filename='images/lenovo-laptop.png')}} " alt="iphone13">
+                                </div></a>
+                                <div class="product-btns">
+                                    <a href="/cart"><button type="button" class="butn fbtn"><span><i class="fa-solid fa-cart-plus fi"></i></span>
+                                    </button></a>
+                                    <a href="/checkout"><button type="button" class="butn">Buy now 
+                                    </button></a>
+                                    <a href="/wishlist"><button type="button" class="butn sbtn"><i class="fa-solid fa-heart si"></i> 
+                                    </button></a>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2>Apple</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fas fa-star"></i>
+                                        </span>
+                                        <span><i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                        <span><i class="far fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="/prod-details" class="product-name"> Iphone 13 in purple color</a>
+                                <p class="product-price">80000₹</p>
+                                <p class="product-price">68000₹</p>
+                            </div>
+
+                            <div class="offer-info">
+                                <h2>25% off</h2>
+                            </div>
+                        </div>
+                        <!-- /single-product -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="brand-sec">
+        <div class="trend">
+            <hr>
+            <h1 class="trend-title">Brands</h1>
+        </div>
+        <div class="our-brands">
+            <ul>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/apple-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/LG-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/mi-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/panasonic-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/realme-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/samsung-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/sony-png.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/vivo-logo.png')}} " alt="">
+                </li></a>
+                <a href="/shop"><li class="logos">
+                    <img src="{{ url_for('static',filename='images/b-logo/boat-logo.png')}} " alt="">
+                </li></a>
+            </ul>
+        </div>
+    </section>
+    {% endblock body %}
